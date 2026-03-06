@@ -41,7 +41,7 @@
     ]
   },
   "contact": {
-    "prompt": "Ready to start your AI journey? Get in touch with me via email or LinkedIn.",
-    "form_action": "Contact: jg847@njit.edu | LinkedIn: https://www.linkedin.com/in/jeanpaul-garcia-724017293/"
+    "prompt": "Ready to start your AI journey? Get in touch with me via email, LinkedIn, or Discord.",
+    "form_action": "mailto:[your-email@example.com]"
   }
 }
