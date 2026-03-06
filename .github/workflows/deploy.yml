@@ -31,6 +31,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Install recorder app dependencies
+        run: npm --prefix recorder-app ci
+
       - name: Run tests
         run: npm test
 
