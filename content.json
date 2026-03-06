@@ -42,6 +42,20 @@
   },
   "contact": {
     "prompt": "Ready to start your AI journey? Get in touch with me via email, LinkedIn, or Discord.",
-    "form_action": "mailto:[your-email@example.com]"
+    "form_action": "mailto:jg847@njit.edu",
+    "contact_methods": [
+      {
+        "type": "email",
+        "value": "jg847@njit.edu"
+      },
+      {
+        "type": "discord",
+        "value": "https://discord.gg/wd94Dp72"
+      },
+      {
+        "type": "linkedin",
+        "value": "https://www.linkedin.com/in/jeanpaul-garcia-724017293/"
+      }
+    ]
   }
 }
