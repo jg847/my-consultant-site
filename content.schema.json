@@ -1,0 +1,146 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AI Consultant Site Content",
+  "description": "Single source of truth for site content. Edit this file to update your site.",
+  "type": "object",
+  "required": ["meta", "hero", "services", "about", "contact"],
+  "additionalProperties": false,
+  "properties": {
+    "meta": {
+      "type": "object",
+      "description": "Personal and SEO metadata",
+      "required": ["name", "title", "tagline", "email", "linkedin"],
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Your full name",
+          "example": "Jane Smith"
+        },
+        "title": {
+          "type": "string",
+          "description": "Your professional title shown in hero and metadata",
+          "example": "AI Strategy Consultant"
+        },
+        "tagline": {
+          "type": "string",
+          "description": "Short value proposition for your consulting practice",
+          "example": "Helping businesses navigate the AI transition"
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "description": "Public contact email used in the Contact section",
+          "example": "jane@example.com"
+        },
+        "linkedin": {
+          "type": "string",
+          "format": "uri",
+          "description": "LinkedIn profile URL for footer and contact links",
+          "example": "https://linkedin.com/in/janesmith"
+        }
+      }
+    },
+    "hero": {
+      "type": "object",
+      "description": "Top-of-page hero section content",
+      "required": ["headline", "subheadline", "cta_text", "cta_href"],
+      "additionalProperties": false,
+      "properties": {
+        "headline": {
+          "type": "string",
+          "description": "Primary headline displayed at top of the site",
+          "example": "Transform Your Business with AI"
+        },
+        "subheadline": {
+          "type": "string",
+          "description": "Supporting copy under the headline",
+          "example": "Strategic guidance for teams adopting AI tools, workflows, and culture."
+        },
+        "cta_text": {
+          "type": "string",
+          "description": "Call-to-action button text",
+          "example": "Get in Touch"
+        },
+        "cta_href": {
+          "type": "string",
+          "description": "Target anchor or URL for the hero call-to-action",
+          "example": "#contact"
+        }
+      }
+    },
+    "services": {
+      "type": "array",
+      "description": "List of service cards rendered in the Services section",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "description", "icon"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Stable identifier for the service entry",
+            "example": "training"
+          },
+          "title": {
+            "type": "string",
+            "description": "Service name shown in card heading",
+            "example": "AI Training"
+          },
+          "description": {
+            "type": "string",
+            "description": "Short explanation of the service offering",
+            "example": "Hands-on workshops for teams at every level — from executives to engineers."
+          },
+          "icon": {
+            "type": "string",
+            "description": "Emoji or short icon text displayed in each service card",
+            "example": "🎓"
+          }
+        }
+      }
+    },
+    "about": {
+      "type": "object",
+      "description": "Professional biography and credibility highlights",
+      "required": ["bio", "highlights"],
+      "additionalProperties": false,
+      "properties": {
+        "bio": {
+          "type": "string",
+          "description": "Main biography paragraph",
+          "example": "10+ years in enterprise technology. I help organizations move from AI curiosity to AI capability."
+        },
+        "highlights": {
+          "type": "array",
+          "description": "Bullet-point credentials or achievements",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "example": "Former CTO at TechCorp"
+          }
+        }
+      }
+    },
+    "contact": {
+      "type": "object",
+      "description": "Contact section prompt and form endpoint",
+      "required": ["prompt", "form_action"],
+      "additionalProperties": false,
+      "properties": {
+        "prompt": {
+          "type": "string",
+          "description": "Short invitation text in the Contact section",
+          "example": "Ready to start your AI journey?"
+        },
+        "form_action": {
+          "type": "string",
+          "format": "uri",
+          "description": "Formspree endpoint URL used by the contact form",
+          "example": "https://formspree.io/f/YOUR_FORM_ID"
+        }
+      }
+    }
+  }
+}

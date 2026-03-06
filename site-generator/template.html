@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{meta.name}} | {{meta.title}}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-50 text-slate-800">
+    <nav class="bg-[#1e3a5f] text-white">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+        <a href="#hero" class="text-lg font-semibold">{{meta.name}}</a>
+        <button
+          id="menu-toggle"
+          class="rounded border border-white/30 px-3 py-1 text-sm md:hidden"
+          type="button"
+          aria-label="Toggle menu"
+        >
+          Menu
+        </button>
+        <div id="menu" class="hidden md:block">
+          <a href="#contact" class="text-sm font-medium hover:text-gray-200">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section id="hero" class="bg-white">
+        <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+          <p class="mb-3 text-sm font-semibold uppercase tracking-wide text-[#1e3a5f]">{{meta.title}}</p>
+          <h1 class="max-w-3xl text-3xl font-bold tracking-tight text-[#1e3a5f] sm:text-4xl lg:text-5xl">{{hero.headline}}</h1>
+          <p class="mt-5 max-w-2xl text-base text-slate-600 sm:text-lg">{{hero.subheadline}}</p>
+          <a
+            href="{{hero.cta_href}}"
+            class="mt-8 inline-flex rounded-md bg-[#1e3a5f] px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-[#16314f]"
+          >
+            {{hero.cta_text}}
+          </a>
+        </div>
+      </section>
+
+      <section id="services" class="border-t border-gray-200 bg-gray-50">
+        <div class="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
+          <h2 class="text-2xl font-bold text-[#1e3a5f] sm:text-3xl">Services</h2>
+          <ul class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">{{services}}</ul>
+        </div>
+      </section>
+
+      <section id="about" class="bg-white">
+        <div class="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
+          <h2 class="text-2xl font-bold text-[#1e3a5f] sm:text-3xl">About</h2>
+          <p class="mt-4 max-w-3xl text-slate-700">{{about.bio}}</p>
+          <div class="mt-6">{{about.highlights}}</div>
+        </div>
+      </section>
+
+      <section id="contact" class="border-t border-gray-200 bg-gray-50">
+        <div class="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
+          <h2 class="text-2xl font-bold text-[#1e3a5f] sm:text-3xl">Contact</h2>
+          <p class="mt-4 text-slate-700">{{contact.prompt}}</p>
+          <a
+            href="mailto:{{meta.email}}"
+            class="mt-6 inline-flex rounded-md bg-[#1e3a5f] px-5 py-3 text-sm font-semibold text-white hover:bg-[#16314f]"
+          >
+            {{meta.email}}
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-[#1e3a5f] text-white">
+      <div class="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-6 text-sm sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
+        <p>© <span id="year"></span> {{meta.name}}</p>
+        <a href="{{meta.linkedin}}" target="_blank" rel="noreferrer" class="font-medium hover:text-gray-200">LinkedIn</a>
+      </div>
+    </footer>
+
+    <script>
+      const button = document.getElementById("menu-toggle");
+      const menu = document.getElementById("menu");
+      if (button && menu) {
+        button.addEventListener("click", () => {
+          menu.classList.toggle("hidden");
+        });
+      }
+      const year = document.getElementById("year");
+      if (year) {
+        year.textContent = new Date().getFullYear().toString();
+      }
+    </script>
+  </body>
+</html>

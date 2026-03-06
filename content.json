@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "name": "Jane Smith",
+    "title": "AI Strategy Consultant",
+    "tagline": "Helping businesses navigate the AI transition",
+    "email": "jane@example.com",
+    "linkedin": "https://linkedin.com/in/janesmith"
+  },
+  "hero": {
+    "headline": "Transform Your Business with AI",
+    "subheadline": "Strategic guidance for teams adopting AI tools, workflows, and culture.",
+    "cta_text": "Get in Touch",
+    "cta_href": "#contact"
+  },
+  "services": [
+    {
+      "id": "training",
+      "title": "AI Training",
+      "description": "Hands-on workshops for teams at every level — from executives to engineers.",
+      "icon": "🎓"
+    },
+    {
+      "id": "strategy",
+      "title": "Strategic Advisory",
+      "description": "Roadmaps, vendor evaluation, and AI readiness assessments.",
+      "icon": "🧭"
+    },
+    {
+      "id": "development",
+      "title": "Development Support",
+      "description": "Technical guidance for integrating AI APIs and building AI-powered tools.",
+      "icon": "⚙️"
+    }
+  ],
+  "about": {
+    "bio": "10+ years in enterprise technology. I help organizations move from AI curiosity to AI capability.",
+    "highlights": [
+      "Former CTO at TechCorp",
+      "Certified AWS ML Specialist",
+      "Speaker at AI Summit 2024"
+    ]
+  },
+  "contact": {
+    "prompt": "Ready to start your AI journey?",
+    "form_action": "https://formspree.io/f/YOUR_FORM_ID"
+  }
+}
