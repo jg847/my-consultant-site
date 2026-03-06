@@ -6,6 +6,7 @@ import HomePage from "../app/page";
 
 class MockMediaRecorder {
   public ondataavailable: ((event: { data: Blob }) => void) | null = null;
+  public onstop: ((event: Event) => void) | null = null;
   public state: "inactive" | "recording" = "inactive";
 
   start() {
@@ -17,6 +18,7 @@ class MockMediaRecorder {
     this.ondataavailable?.({
       data: new Blob([new Uint8Array([1, 2, 3])], { type: "audio/webm" })
     });
+    this.onstop?.(new Event("stop"));
   }
 }
 
