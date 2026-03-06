@@ -265,18 +265,21 @@ export default function HomePage() {
     }
   };
 
-  const handleStop = () => {
-    dispatch({ type: "resetTransient" });
-    const recorder = mediaRecorder.current;
-    if (!recorder) {
-      return;
-    }
+const handleStop = () => {
+  dispatch({ type: "resetTransient" });
+  const recorder = mediaRecorder.current;
+  if (!recorder) {
+    return;
+  }
 
-    recorder.stop();
+  recorder.onstop = () => {
     const blob = new Blob(chunks.current, { type: "audio/webm" });
     dispatch({ type: "setAudioBlob", blob });
     dispatch({ type: "setStage", stage: "idle" });
   };
+
+  recorder.stop();
+};
 
   const handleTranscribe = async () => {
     if (!state.audioBlob) {

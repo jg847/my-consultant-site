@@ -153,7 +153,11 @@ export async function handleClean(
     const responseText = textBlock && "text" in textBlock ? textBlock.text : "";
 
     try {
-      const parsed = JSON.parse(responseText);
+      const cleaned = responseText
+        .replace(/^```(?:json)?\s*/i, "")
+        .replace(/```\s*$/i, "")
+        .trim();
+      const parsed = JSON.parse(cleaned);
       if (!validateParsedForSection(parsed, selectedSection)) {
         throw new Error("Schema mismatch");
       }

@@ -127,7 +127,8 @@ describe("generator", () => {
     try {
       generateSite(path.resolve(process.cwd(), "content.json"), outputPath);
       const html = readFileSync(outputPath, "utf-8");
-      expect(html).toContain("Jane Smith");
+      const content = JSON.parse(readFileSync(path.resolve(process.cwd(), "content.json"), "utf-8"));
+      expect(html).toContain(content.meta.name);
     } finally {
       rmSync(tempDir, { recursive: true, force: true });
     }
