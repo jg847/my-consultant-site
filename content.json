@@ -7,22 +7,22 @@
     "linkedin": "https://www.linkedin.com/in/jeanpaul-garcia-724017293/"
   },
   "hero": {
-    "headline": "Transform Your Business with AI",
-    "subheadline": "Strategic guidance for teams adopting AI tools, workflows, and culture.",
+    "headline": "Welcome to my Site!",
+    "subheadline": "A porfolio of all my projects, add the rest later!!!",
     "cta_text": "Get in Touch",
     "cta_href": "#contact"
   },
   "services": [
     {
       "id": "training",
-      "title": "AI Training",
-      "description": "Hands-on workshops for teams at every level — from executives to engineers.",
+      "title": "Snake Game",
+      "description": "Just a little snake game I made with A.I.",
       "icon": "🎓"
     },
     {
       "id": "strategy",
-      "title": "Strategic Advisory",
-      "description": "Roadmaps, vendor evaluation, and AI readiness assessments.",
+      "title": "Newark Rent Burden",
+      "description": "A little website to calculate Newark rent burden.",
       "icon": "🧭"
     },
     {
@@ -33,15 +33,14 @@
     }
   ],
   "about": {
-    "bio": "I am a senior at NJIT pursuing a bachelor's degree in web information systems. I help organizations move from AI curiosity to AI capability, working to expand my portfolio and improve my resume.",
+    "bio": "I am a senior at NJIT pursuing a bachelor's degree in web information systems. Working to expand my portfolio and improve my resume. I'll be adding any projects I work on here!",
     "highlights": [
       "Senior at NJIT",
-      "Bachelor's degree in web information systems",
-      "Specializes in helping organizations develop AI capability"
+      "Bachelor's degree in web information systems"
     ]
   },
   "contact": {
-    "prompt": "Ready to start your AI journey? Get in touch with me via email or LinkedIn.",
+    "prompt": "Get in touch with me via email or LinkedIn.",
     "form_action": "Contact via email at jg847@njit.edu or connect on LinkedIn at https://www.linkedin.com/in/jeanpaul-garcia-724017293/",
     "contact_methods": [
       {
