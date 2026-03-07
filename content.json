@@ -7,10 +7,10 @@
     "linkedin": "https://www.linkedin.com/in/jeanpaul-garcia-724017293/"
   },
   "hero": {
-    "headline": "Welcome to my Site!",
-    "subheadline": "A porfolio of all my projects, add the rest later!!!",
-    "cta_text": "Get in Touch",
-    "cta_href": "#contact"
+    "headline": "Welcome to My Website",
+    "subheadline": "This is a portfolio of all projects I'll complete",
+    "cta_text": "[Call to action text]",
+    "cta_href": "[Link destination]"
   },
   "services": [
     {
