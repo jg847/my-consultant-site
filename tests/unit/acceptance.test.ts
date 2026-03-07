@@ -35,15 +35,11 @@ describe("assignment acceptance criteria", () => {
   });
 
   test("docs/index.html contains at least 3 service titles", () => {
-    const html = readUtf8("docs/index.html");
-    const content = JSON.parse(readUtf8("content.json")) as {
-      services: Array<{ title: string }>;
-    };
-
+    const html = readFileSync(path.resolve(root, "docs", "index.html"), "utf-8");
+    const content = JSON.parse(readFileSync(path.resolve(root, "content.json"), "utf-8"));
     const matchedCount = content.services
-      .map((service) => service.title)
-      .filter((title) => html.includes(title)).length;
-
+      .map((s: { title: string }) => s.title)
+      .filter((title: string) => html.includes(title)).length;
     expect(matchedCount).toBeGreaterThanOrEqual(3);
   });
 

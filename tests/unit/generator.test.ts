@@ -141,9 +141,10 @@ describe("generator", () => {
     try {
       generateSite(path.resolve(process.cwd(), "content.json"), outputPath);
       const html = readFileSync(outputPath, "utf-8");
-      expect(html).toContain("AI Training");
-      expect(html).toContain("Strategic Advisory");
-      expect(html).toContain("Development Support");
+        const content = JSON.parse(readFileSync(path.resolve(process.cwd(), "content.json"), "utf-8"));
+        for (const service of content.services) {
+          expect(html).toContain(service.title);
+}
     } finally {
       rmSync(tempDir, { recursive: true, force: true });
     }
